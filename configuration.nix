@@ -38,7 +38,8 @@
   services.xserver.enable = true;
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-
+  #enable fwupd hardware support
+  services.fwupd.enable = true;
   
 
   # Configure keymap in X11
