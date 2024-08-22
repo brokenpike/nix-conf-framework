@@ -7,7 +7,7 @@
 
   home.packages = with pkgs; [
   cowsay
-  helix-gpt
+  helix
   ];
     programs.git = {
     enable = true;
