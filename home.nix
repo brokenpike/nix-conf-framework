@@ -8,6 +8,9 @@
   home.packages = with pkgs; [
   cowsay
   helix
+  microsoft-edge
+  chromium
+
   ];
     programs.git = {
     enable = true;
