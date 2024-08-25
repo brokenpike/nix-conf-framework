@@ -1,22 +1,26 @@
-{ config, pkgs, ... }:
+{ config, pkgs,inputs,unstable, ... }:
 
 {
   # TODO please change the username & home directory to your own
   home.username = "scott";
   home.homeDirectory = "/home/scott";
-
+  #imports = [./helix.nix];
   home.packages = with pkgs; [
   cowsay
-  helix
+  #helix
   microsoft-edge
   chromium
+  zeroad
 
   ];
-    programs.git = {
+  programs.git = {
     enable = true;
     userName = "brokenpike";
     userEmail = "brokenpike@garmr.org";
   };
+
+
+
   home.stateVersion = "24.05";
 
   # Let home Manager install and manage itself.
