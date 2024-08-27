@@ -56,10 +56,10 @@
   # Enable sound.
   # hardware.pulseaudio.enable = true;
   # OR
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+   services.pipewire = {
+     enable = true;
+     pulse.enable = true;
+   };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
@@ -88,6 +88,7 @@
      qemu
      lm_sensors  #gnome.gnome-boxes
      inputs.unstable.legacyPackages."${pkgs.system}".vim
+     inputs.unstable.legacyPackages."${pkgs.system}".helix
      #inputs.helix.packages."${pkgs.system}".helix
    ];
 

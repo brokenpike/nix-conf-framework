@@ -11,7 +11,9 @@
   microsoft-edge
   chromium
   zeroad
-
+  vlc
+  youtube-tui
+  #inputs.unstable.legacyPackages."${pkgs.system}".vim
   ];
   programs.git = {
     enable = true;
