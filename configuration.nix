@@ -88,7 +88,7 @@
      quickemu
      qemu
      lm_sensors  #gnome.gnome-boxes
-     inputs.unstable.legacyPackages."${pkgs.system}".vim
+     #inputs.unstable.legacyPackages."${pkgs.system}".vim
      inputs.unstable.legacyPackages."${pkgs.system}".helix
      #inputs.helix.packages."${pkgs.system}".helix
    ];

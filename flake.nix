@@ -14,6 +14,7 @@
       # the `inputs.nixpkgs` of the current flake,
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
+      #inputs.nixpkgs.follows = "unstable";
     };
   };
 

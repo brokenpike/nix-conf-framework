@@ -15,6 +15,7 @@
   zeroad
   vlc
   youtube-tui
+  vim
   kdePackages.kate
   #inputs.unstable.legacyPackages."${pkgs.system}".vim
   ];
