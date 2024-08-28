@@ -1,4 +1,6 @@
-{ config, pkgs,inputs,unstable, ... }:
+{ config, pkgs,
+#inputs,unstable,
+... }:
 
 {
   # TODO please change the username & home directory to your own
@@ -13,6 +15,7 @@
   zeroad
   vlc
   youtube-tui
+  kdePackages.kate
   #inputs.unstable.legacyPackages."${pkgs.system}".vim
   ];
   programs.git = {

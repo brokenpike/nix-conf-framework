@@ -19,7 +19,7 @@
 
   outputs = { self,
               nixpkgs,
-              unstable,
+              #unstable,
               nixos-hardware,
               home-manager,
               ...
@@ -30,7 +30,7 @@
     {
       system = "x86_64-linux";
       #config.allowUnfree = true;
-      #specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs; };
       modules =
       [
         # Import the previous configuration.nix we used,
@@ -45,7 +45,7 @@
             home-manager.users.scott = import ./home.nix;
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
-        { _module.args = { inherit inputs; };}
+        #{ _module.args = { inherit inputs; };}
       ];
     };
   };
