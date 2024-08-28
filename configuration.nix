@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs,inputs, ... }:
+{ config, lib, pkgs,pkgs-unstable, ... }:
 
 {
   imports =
@@ -89,7 +89,8 @@
      qemu
      lm_sensors  #gnome.gnome-boxes
      #inputs.unstable.legacyPackages."${pkgs.system}".vim
-     inputs.unstable.legacyPackages."${pkgs.system}".helix
+     #pkgs-unstable.legacyPackages."${pkgs.system}".helix
+     pkgs-unstable.vim
      #inputs.helix.packages."${pkgs.system}".helix
    ];
 

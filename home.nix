@@ -1,4 +1,4 @@
-{ config, pkgs,
+{ config, pkgs,pkgs-unstable,
 #inputs,unstable,
 ... }:
 
@@ -15,7 +15,8 @@
   zeroad
   vlc
   youtube-tui
-  vim
+  #vim
+  helix
   kdePackages.kate
   #inputs.unstable.legacyPackages."${pkgs.system}".vim
   ];
@@ -24,6 +25,7 @@
     userName = "brokenpike";
     userEmail = "brokenpike@garmr.org";
   };
+
 
 
 

@@ -20,18 +20,31 @@
 
   outputs = { self,
               nixpkgs,
-              #unstable,
+              unstable,
               nixos-hardware,
               home-manager,
               ...
             }@inputs:
   {
     # Please replace my-nixos with your hostname
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec
     {
       system = "x86_64-linux";
       #config.allowUnfree = true;
-      specialArgs = { inherit inputs; };
+      #specialArgs = { inherit inputs; };
+      specialArgs = {
+          # To use packages from nixpkgs-stable,
+          # we configure some parameters for it first
+          pkgs-unstable = import unstable {
+            # Refer to the `system` parameter from
+            # the outer scope recursively
+            inherit system;
+            # To use Chrome, we need to allow the
+            # installation of non-free software.
+            config.allowUnfree = true;
+          };
+
+        };
       modules =
       [
         # Import the previous configuration.nix we used,
