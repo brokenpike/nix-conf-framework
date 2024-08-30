@@ -15,6 +15,7 @@
   zeroad
   vlc
   youtube-tui
+  yt-dlp
   #vim
   helix
   kdePackages.kate

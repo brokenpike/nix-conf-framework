@@ -27,7 +27,7 @@
             }@inputs:
   {
     # Please replace my-nixos with your hostname
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec
+    nixosConfigurations.framework = nixpkgs.lib.nixosSystem rec
     {
       system = "x86_64-linux";
       #config.allowUnfree = true;

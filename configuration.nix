@@ -14,7 +14,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # networking.hostName = "nixos"; # Define your hostname.
+   networking.hostName = "framework"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
    networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -43,7 +43,9 @@
   #services.xserver.desktopManager.gnome.enable = true;
   #enable fwupd hardware support
   services.fwupd.enable = true;
-  
+  services.tailscale.enable = true;
+  # useRoutingFeatures = "client" enables mulvad peers
+  services.tailscale.useRoutingFeatures = "client";
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
@@ -87,6 +89,8 @@
      htop
      quickemu
      qemu
+     bitwarden-desktop
+     ktailctl
      lm_sensors  #gnome.gnome-boxes
      #inputs.unstable.legacyPackages."${pkgs.system}".vim
      #pkgs-unstable.legacyPackages."${pkgs.system}".helix
