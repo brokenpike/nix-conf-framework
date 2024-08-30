@@ -19,6 +19,7 @@
   #vim
   helix
   kdePackages.kate
+  fish
   #inputs.unstable.legacyPackages."${pkgs.system}".vim
   ];
   programs.git = {
