@@ -98,7 +98,7 @@
      #inputs.helix.packages."${pkgs.system}".helix
    ];
 
-  # Some programs need SUID wrappers, can be configured further or are
+  # Some proghttps://login.tailscale.com/admin/settings/generalrams need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
@@ -109,7 +109,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
